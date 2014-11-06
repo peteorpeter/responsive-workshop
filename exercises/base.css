@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 20px;
+  font-size: 30px;
+  font-family: "Helvetic Neue", "Arial", sans-serif;
+}
+main, aside {
+  min-height: 500px;
+  padding: 20px;
+  background: #ed855a;
+  color: #ffffff;
+  border-radius: 20px;
+}

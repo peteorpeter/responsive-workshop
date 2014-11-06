@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=true" name="viewport">
+    <title>Exercise – Responsive Design</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        line-height: 1.4em;
+      }
+      body {
+        padding: 20px;
+      }
+      article {
+        border-top: 1px solid;
+      }
+
+      h3 {
+        padding: 20px 0;
+        margin: 0;
+        cursor: pointer;
+      }
+      section {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 300ms, margin 300ms;
+      }
+      .open section {
+        max-height: 1000px
+      }
+      .open section:last-of-type {
+        margin-bottom: 30px;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 4px;
+        background: #eee;
+        border-radius: 3px;
+        color: #333;
+      }
+
+      ol {
+
+      }
+      ol>li {
+        position: relative
+      }
+
+      input[type=checkbox] {
+        position: absolute;
+        left: -40px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Responsive Design Exercises</h1>
+      <article>
+        <h3>1: Warm Up</h3>
+        <section>
+          <p>Prime the ol' brain-pump with some basic HTML/CSS.</p>
+          <ol>
+            <li>See the link to the exercise page above?  Go ahead and open the exercise page up in Chrome. <em>Behold the beauty.</em></li>
+            <li>Now, open the page up in your text editor.  We're going to make it <em>even more</em> magnificent.</li>
+            <li>In general, the important styles for the exercise are in a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> of the page.  Do you see it?</li>
+            <li>Ok, let's edit.  Change the <code>color</code> of the <code>h1</code> to make it more subtle.  Try <code>#333333</code> if you like. Save the file, then switch back to Chrome and reload the page to view the changes.</li>
+            <li>The paragraph text is too small.  Back to your editor again to increase the <code>font-size</code>.  Try <code>12px</code> or <code>14px</code>.  (Or <code>13px</code> if you aren't superstitious).  Again, save the changes, switch back the Chrome and reload the page to view the changes.  How is it lookin'?</li>
+            <li>Now we'll spruce up the layout a little.  Let's make this a "fixed-width" layout by setting the <code>body</code> <code>width</code> to <code>800px</code>. Save and refresh.</li>
+            <li>Stuck on anything?  You can always take a look at the completed exercise from the other link above.</li>
+          </ol>
+        </section>
+        <section>
+          <p>Already twiddling your thumbs? Try these extra credit warm-ups.</p>
+          <ol>
+            <li>Add another paragraph and give it a <code>class</code> of your choosing. Then, add style rules for this class that center the text, add a border, a little padding, and a tasteful background color.</li>
+            <li>Add an <code>&lt;aside&gt;</code> tag after the <code>&lt;main&gt;</code> with a few paragraphs in it.  Using CSS floats, make <code>&lt;main&gt;</code> and <code>&lt;aside&gt;</code> side-by-side columns.</li>
+          </ol>
+        </section>
+
+      </article>
+      <article>
+        <h3>Exercise 1</h3>
+        <section>
+          <ol>
+            <li>Open up <a href="exercises/1.html">this</a></li>
+            <li>Open up <a href="exercises/1.html">this</a></li>
+            <li>Open upx` <a href="exercises/1.html">this</a></li>
+          </ol>
+        </section>
+      </article>
+    </main>
+
+    <script src="jquery.min.js"></script>
+    <script>
+      // WARNING: Lazy cheater code for expedience only!
+
+      // Add checkboxes
+      $('li').prepend('<input type="checkbox"/>').wrapInner('<label></label>');
+
+      // Add links to exercise files
+      $('article').each(function(i, ex  ){
+        $(ex).find('section:first').prepend(
+                '<a href="exercises/' + (i+1) + '.html" target="_blank"><strong>Exercise page</strong></a> | '
+                + ' <a href="exercises/' + (i+1) + '-completed.html" target="_blank">Completed exercise page</a> (cheating encouraged!)'
+        )
+      });
+
+      // Accordion
+      $('h3').on('click', function(){
+        var article = $(this).closest('article');
+        if (article.hasClass('open')){
+          article.removeClass('open');
+        } else {
+          $('article.open').removeClass('open');
+          article.addClass('open');
+        }
+      })
+    </script>
+  </body>
+</html>

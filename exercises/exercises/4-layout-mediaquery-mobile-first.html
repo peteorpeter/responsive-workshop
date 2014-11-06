@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=true" name="viewport">
+    <title></title>
+    <link rel="stylesheet" href="../base.css">
+    <style>
+      /* Default styles are geared to narrow screens */
+      main, aside {
+        margin: 0 2% 2% 2%;
+      }
+      main, aside {
+        float: none;
+        width: auto;
+      }
+
+      /* Any screen bigger than 500px is broken into columns */
+      @media screen and (min-width: 500px){
+        main, aside {
+          float: left;
+        }
+        main {
+          width: 60%;
+        }
+        aside {
+          width: 32%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example">
+      <main>Main</main>
+      <aside>Aside</aside>
+    </div>
+  </body>
+</html>
