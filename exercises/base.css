@@ -1,15 +1,30 @@
+/*
+ Set all the elements to use the more modern "border-box" box model.
+ This makes reasoning about widths much simpler. AOK in IE8+ and all mobile browsers.
+*/
 * {
   box-sizing: border-box;
 }
+
+/*
+  Really basic (fairly hideous) styles!
+*/
 body {
   padding: 20px;
   font-size: 30px;
   font-family: "Helvetic Neue", "Arial", sans-serif;
 }
 main, aside {
-  min-height: 500px;
+  min-height: 300px;
   padding: 20px;
   background: #ed855a;
   color: #ffffff;
   border-radius: 20px;
+}
+p, ol, ul {
+  font-size: 18px;
+}
+a {
+  text-decoration: underline;
+  color: chartreuse;
 }

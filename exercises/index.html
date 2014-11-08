@@ -81,12 +81,47 @@
 
       </article>
       <article>
-        <h3>Exercise 1</h3>
+        <h3>2: A Basic Layout</h3>
         <section>
+          <p>Start by examining a simple fixed layout and then make it fluid using percentage-based widths.</p>
           <ol>
-            <li>Open up <a href="exercises/1.html">this</a></li>
-            <li>Open up <a href="exercises/1.html">this</a></li>
-            <li>Open upx` <a href="exercises/1.html">this</a></li>
+            <li>First, open up the page in Chrome and examine it with the dev tools, using the Elements pane with the Styles tab to see what is happening.  Why is <code>&lt;main&lt;</code> next to <code>&lt;aside</code>?</li>
+            <li>Turn on Device mode.  Pick a few devices and see what happens to the layout.  Each time you change the device, you may (If you can't fit the device screen on your laptop's screen, enable the "fit" checkbox below the device model dropdown.)</li>
+            <li>Using the dev tools, find where the <code>&lt;main&lt;</code>'s width is set.  Edit the width in-place.</li>
+            <li>Reload the page to obliterate the temporary changes you made in the dev tools and return to viewing the saved CSS.</li>
+            <li>The simplest way to make a layout more responsive is to set all your widths in percentages.  Using the dev tools, change the widths of <code>&lt;main&lt;</code> and <code>&lt;aside&lt;</code> to <code>70%</code> and <code>30%</code>, respectively.</li>
+            <li>Whoops! Something ain't right.  Turns out, in addition to width, we have some margin infecting our layout.  Let's go ahead and make the margin fluid as well, and subtract it from the width of <code>&lt;main&lt;</code>.  In dev tools, make it's  <code>width: 68%</code> and <code>margin-right: 2%</code>.</li>
+            <li>Now, go through a few devices (or drag the viewport handles) and see how the layout behaves.  Turn off device-mode to see how it looks full-width.</li>
+            <li>Congratulate yourself for making a responsive layout!  Ok, maybe it's responsive "lite".  Baby steps!</li>
+          </ol>
+        </section>
+        <section>
+          <p>Extra Credit</p>
+          <ol>
+            <li>Add a third column before or after. Add styles to make them all fit nicely with percentage-based widths!</li>
+            <li>Do you know about absolute positioning (TODO: link to tutorial or MDN)?  If you do, try removing the <code>float: left</code> from <code>&lt;aside&lt;</code> and using absolute positioning to place it to the right of <code>&lt;main&lt;</code>.</li>
+          </ol>
+        </section>
+      </article>
+      <article>
+        <h3>3: Baby's First Media Query</h3>
+        <section>
+          <p>Add a simple media query to an otherwise unassuming fluid layout.</p>
+          <ol>
+            <li>Open up the exercise page in Chrome - should look familiar!  Turn on device-mode and pick a device.  This layout needs some love at narrower screens! </li>
+            <li>Drag the viewport width handle around.  Around what width does it look too skinny? <input type="number" min="50" max="1000" step="50"/>  This is the "breakpoint" we want to target for some different styling.</li>
+            <li>Open the page up in your editor.  Below the other styles, add a media query block that targets screens that are as wide as or narrower than the breakpoint you found above.  It should look like <code>@media screen and (max-width: BREAKPOINT_IN_PX){ ... }</code>.</li>
+            <li>Any styles within this block will only be applied to narrower screens.  To see the effect, add a style rule within the media query block that changes the background color of <code>&lt;main&lt;</code> to "purple". Save the changes in your editor, reload the page in Chrome and drag the viewport width around. <em>Isn't it pretty?</em></li>
+            <li>Nice! That was utterly useless.  What we'd like to do is change the layout for those narrower screens.  Let's make <code>&lt;main&lt;</code> and <code>&lt;aside&lt;</code> full-width instead of columns.  In your editor, within your new media query, set their widths to "100%". Save, reload the page and behold!</li>
+          </ol>
+        </section>
+      </article>
+      <article>
+        <h3>4: Mobile First</h3>
+        <section>
+          <p>Following along with Pete as we reorganize our CSS to treat small screens as first-class citizens.</p>
+          <ol>
+            <li>Open up the exercise page in Chrome and follow along!</li>
           </ol>
         </section>
       </article>

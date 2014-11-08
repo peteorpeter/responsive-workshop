@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=true" name="viewport">
+    <title></title>
+    <link rel="stylesheet" href="../base.css">
+    <style>
+      /* Desktop styles */
+      main, aside {
+        float: left;
+      }
+      main {
+        width: 68%;
+        margin-right: 2%;
+      }
+      aside {
+        width: 30%;
+      }
+
+      /* Special rules just for narrower screens */
+      @media screen and (max-width: 500px){
+        /* Mobile styles */
+        main, aside {
+          width: 100%;
+        }
+        main {
+          margin-right: 0;
+          margin-bottom: 2%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example">
+      <main>
+        <h1>Main</h1>
+        <p>Hello, how are you doing, journal?  Well, it's been a long day, hasn't it?  I need to tell you a story.</p>
+        <p>Earlier today I was exploring a museum in the unexplained mysteries section.  I found an odd lever on the side of an amazing clay figure. I pulled the lever and oh my G-O-S-H! A passage appeared right where I was standing!</p>
+      </main>
+      <aside>
+        <h3>Aside</h3>
+        <ul>
+          <li>
+            <a>Other stories</a>
+          </li>
+          <li>
+            <a>Spookier stories</a>
+          </li>
+          <li>
+            <a>Silly stories</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </body>
+</html>
