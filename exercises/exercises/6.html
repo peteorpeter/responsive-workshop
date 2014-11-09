@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=true" name="viewport">
+    <title></title>
+    <link rel="stylesheet" href="../base.css">
+    <style>
+      main {
+        /* A quirk of floats is that odd things happen if you don't float the container as well. */
+        float: left;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      .grid {
+        padding: 20px 0 0 20px;
+        list-style: none;
+        font-size: 32px;
+      }
+      .grid li {
+        float: left;
+        width: 200px;
+        padding: 0 20px 20px 0;
+      }
+      .grid div {
+        background: rgba(0,0,0,.4);
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      @media screen and (min-width: 900px) {
+        .grid li {
+          width: 25%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example">
+      <main>
+        <ul class="grid">
+          <li>
+            <div>
+              1
+            </div>
+          </li>
+          <li>
+            <div>
+              2
+            </div>
+          </li>
+          <li>
+            <div>
+              3
+            </div>
+          </li>
+          <li>
+            <div>
+              4
+            </div>
+          </li>
+          <li>
+            <div>
+              5
+            </div>
+          </li>
+          <li>
+            <div>
+              6
+            </div>
+          </li>
+          <li>
+            <div>
+              7
+            </div>
+          </li>
+          <li>
+            <div>
+              8
+            </div>
+          </li>
+          <li>
+            <div>
+              9
+            </div>
+          </li>
+          <li>
+            <div>
+              10
+            </div>
+          </li>
+          <li>
+            <div>
+              11
+            </div>
+          </li>
+          <li>
+            <div>
+              12
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>
