@@ -1,0 +1,215 @@
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base1;
+$headingColor: $base2;
+$headingTextShadow: none;
+$backgroundColor: $base03;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+
+
+.reveal pre code {
+  font-size: 24px
+}
+
+cite {
+  font-size: 12px
+}
+
+
+/* Screenulator 5000 */
+$smallW: 130px;
+$smallH: 200px;
+$mediumW: 280px;
+$mediumH: 210px;
+$largeW: 500px;
+$largeH: 280px;
+
+screenulator {
+  display: block;
+  height: $largeH + 80px;
+  padding-top: 30px;
+  margin-top: -160px;
+  overflow: hidden;
+
+  /* All layouts */
+  .screen {
+    width: $smallW;
+    height: $smallH;
+    padding: 10px;
+    margin: 40px auto 0;
+    border: 10px solid $headingColor;
+    text-align: center;
+    -webkit-transition: height 0.3s ease-out, width 0.3s ease-out, margin .3s ease-out;
+
+    &.medium {
+      width: $mediumW;
+      height: $mediumH;
+      margin-top: 30px;
+    }
+
+    &.large {
+      width: $largeW;
+      height: $largeH;
+      margin-top: -20px;
+    }
+
+    .c1, .c2, .c3 {
+      &:hover:after {
+        color: $headingColor;
+      }
+    }
+    .c1 {
+      background: $orange;
+      &:hover:after {
+        content: 'content';
+      }
+    }
+
+    .c2 {
+      background: lighten($orange, 10%);
+      &:hover:after {
+        content: 'nav';
+      }
+    }
+    .c3 {
+      background: lighten($orange, 20%);
+      &:hover:after {
+        content: 'aux';
+      }
+    }
+  }
+
+  /* Main Content with Aside */
+  &.main-aside {
+    .screen {
+      display: flex;
+      flex-flow: row wrap;
+
+      // Hide .c3
+      .c3 {
+        display: none;
+      }
+
+      // Small Layout - Two rows
+      .c1, .c2 {
+        width: 100%;
+        height: 50%;
+      }
+
+      // Medium And Large Layout - Two columns
+      &.medium, &.large {
+        .c1,
+        .c2 {
+          height: 100%;
+        }
+        .c1 {
+          width: 70%;
+          order: 2;
+        }
+        .c2 {
+          width: 30%;
+          order: 1;
+        }
+      }
+    }
+  }
+
+
+  /* Column ++ */
+  &.column-plus-plus {
+    .screen {
+      display: flex;
+      flex-flow: row wrap;
+
+      // Small Layout - Three rows
+      .c1, .c2, .c3 {
+        width: 100%;
+        height: $smallH / 3;
+      }
+
+      // Medium Layout - Two upper columns, bottom row
+      &.medium {
+        .c1,
+        .c2 {
+          height: 2/3 * $mediumH;
+        }
+        .c1 {
+          width: 70%;
+          order: 2;
+        }
+        .c2 {
+          width: 30%;
+          order: 1;
+        }
+        .c3 {
+          height: 1/3 * $mediumH;
+          width: 100%;
+          order: 3;
+        }
+      }
+
+      // Large Layout - Three columns
+      &.large {
+        .c1,
+        .c2,
+        .c3 {
+          height: $largeH;
+        }
+        .c1 {
+          width: 60%;
+          order: 2;
+        }
+        .c2 {
+          width: 20%;
+          order: 1;
+        }
+        .c3 {
+          width: 20%;
+          order: 3;
+        }
+      }
+    }
+  }
+
+  &.shifter {
+    .c1, .c2, .c3 {
+      width: 100%;
+      height: $smallH / 3;
+    }
+
+    &.medium {
+
+    }
+  }
+}
+
+tr:hover td {
+  background-color: rgba(255,255,255, .8);
+  color: $base02;
+}
+
+.pixel-ratio-table {
+  td:first-child {
+    width: 250px
+  }
+}
+
