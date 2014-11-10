@@ -24,7 +24,7 @@
       section {
         max-height: 0;
         overflow: hidden;
-        -webkit-transition: max-height 300ms, margin 300ms;
+        -webkit-transition: max-height 300ms, margin 100ms;
       }
       .open section {
         max-height: 1000px
@@ -134,12 +134,43 @@
         </section>
       </article>
       <article>
-        <h3>6: Infinite grids</h3>
+        <h3>6: Adjustable grids</h3>
         <section>
-          <p></p>
+          <p>Take a simple, crude grid layout and make it conform smoothly to the screen width.</p>
           <ol>
             <li>The starting exercise page is already responsive, but in a kind of crude way.  In Chrome's device-mode, check out the page at various widths and note how the spacing on the right side of the grid behaves.</li>
-            <li>Let's make the grid fluid </li>
+            <li>First off, in dev tools, figure out which style is controlling the width of the grid items.  Verify you have the right style by changing the value and seeing the impact.</li>
+            <li>Let's make the grid fit it's container by using percentage-based widths.  We want to choose a width that is cleanly divisible into 100 so there is no gap on the right side.  Let's start with 25%.  Just make this change in Chrome for now.</li>
+            <li>Goof around with the device width and see what happens.  What happens on narrower and wider screens?</li>
+            <li>Four items per column is too many for our narrowest screens.  Let's make our mobile-first default a 2-item-per-row grid.  Go ahead and switch to your editor and make 50% the default width, save and reload.</li>
+            <li>We really want this grid to work well at any width, so we are going to add some fine-grained breakpoints. Add a breakpoint for screens wider than 600px that switches to a 3-column layout. (Since 100/3 is 33.333333..., we will just use 33.333%)</li>
+            <li>Add media queries for 4-column and 6-column layouts at screen widths that make sense to you.  Check your work in Chrome and go back and adjust the breakpoints until the transitions between layouts feel right.</li>
+          </ol>
+        </section>
+        <section>
+          <p>Extra Credit</p>
+          <ol>
+            <li>Make minor adjustments to the font-size and grid item height at each breakpoint.  The general rule is, as screens get larger, noses get further away, so adjust slightly up at each breakpoint!</li>
+            <li>Often, layouts feel out-of-proportion when they get too wide.  Give our <code>&lt;main&gt;</code> a <code>max-width</code> of 1200px.  Center it as well by adding <code>margin: 0 auto</code>.</li>
+            <li>Difficulty: ♦♦. Give the first item in each row a special background-color.  Use the <code>nth-child</code> selector (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child">background</a>).  Try to get the first-item-in-row highlight working at all the breakpoints.</li>
+          </ol>
+        </section>
+      </article>
+      <article>
+        <h3>9: Iconpalooza</h3>
+        <section>
+          <p>Code along with Pete as we run the gauntlet of icon-making tools and weigh the responsive pros and cons to each approach.</p>
+          <ol>
+            <li>Open the exercise page up in Chrome, and follow along as Pete blithers!</li>
+          </ol>
+        </section>
+      </article>
+      <article class="not-an-exercise">
+        <h3>Feedback</h3>
+        <section>
+          <p>Your feedback would help improve this workshop and make the instructor's day!</p>
+          <ol>
+            <li>Fill out <a href="http://goo.gl/forms/vGhe3W7IYn">this quick form!</a></li>
           </ol>
         </section>
       </article>
@@ -153,7 +184,7 @@
       $('li').prepend('<input type="checkbox"/>').wrapInner('<label></label>');
 
       // Add links to exercise files
-      $('article').each(function(i, ex  ){
+      $('article').not('.not-an-exercise').each(function(i, ex  ){
         $(ex).find('section:first').prepend(
                 '<a href="exercises/' + (i+1) + '.html" target="_blank"><strong>Exercise page</strong></a> | '
                 + ' <a href="exercises/' + (i+1) + '-completed.html" target="_blank">Completed exercise page</a> (cheating encouraged!)'

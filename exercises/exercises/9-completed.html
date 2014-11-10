@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=true" name="viewport">
+    <title></title>
+    <link rel="stylesheet" href="../base.css">
+    <style>
+
+      main {
+        font-size: 50px;
+      }
+
+      /* Bitmap */
+      .icon-bitmap {
+        display: inline-block;
+        height: 30px;
+        width: 50px;
+        background: url(../img/icon-bitmap.png)
+      }
+      @media screen and (-webkit-min-device-pixel-ratio: 1.5){
+        .icon-bitmap{
+          background: url(../img/icon-bitmap@2x.png)
+        }
+      }
+
+      /* SVG */
+      .icon-svg {
+        display: inline-block;
+        height: 30px;
+        width: 50px;
+        background: url(../img/icon-svg.svg)
+      }
+
+      /* Inline SVG */
+      /* Weird CSS! SVG elements have different properties that HTML elements */
+      .icon-inline-svg:hover .circle {
+        fill: red;
+      }
+      .icon-inline-svg:hover .triangle {
+        fill: green;
+      }
+      .icon-inline-svg:hover .square {
+        fill: blue;
+      }
+
+      /* Icon font */
+      @font-face {
+      	font-family: 'icomoon';
+      	src:url('../fonts/icomoon.eot?3rneej');
+      	src:url('../fonts/icomoon.eot?#iefix3rneej') format('embedded-opentype'),
+      		url('../fonts/icomoon.woff?3rneej') format('woff'),
+      		url('../fonts/icomoon.ttf?3rneej') format('truetype'),
+      		url('../fonts/icomoon.svg?3rneej#icomoon') format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+      .icon-font {
+        font-family: 'icomoon';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .icon-font:before {
+        content: "\e600";
+        font-size: 30px;
+        color: #BE21DE;
+      }
+      .icon-font:hover:before {
+        color: purple;
+      }
+
+      /* Inline HTML Entity */
+      .icon-html-entity {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 32px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 30px;
+        font-weight: bold;
+        border-radius: 100%;
+        background: #BE21DE;
+        color: #B8E986;
+      }
+      .icon-html-entity:hover {
+        background: purple;
+        color: white;
+      }
+
+      /* Character-based icon via content */
+      .icon-pseudo-content {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 32px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 30px;
+        font-weight: bold;
+        border-radius: 100%;
+        background: #BE21DE;
+        color: #B8E986;
+      }
+      .icon-pseudo-content:before {
+        content: "\00d7";
+      }
+      .icon-pseudo-content:hover {
+        background: purple;
+        color: white;
+      }
+      .icon-pseudo-content:hover:before {
+        content: "+";
+      }
+
+      /* Draw with CSS! */
+      /* (Only practical for very simple shapes!) */
+      .icon-pure-css {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background: #BE21DE;
+      }
+      .icon-pure-css:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        width: 16px;
+        height: 4px;
+        margin-left: -8px;
+        margin-top: -2px;
+        background: #B8E986;
+      }
+      .icon-pure-css:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        width: 4px;
+        height: 16px;
+        margin-left: -2px;
+        margin-top: -8px;
+        background: #B8E986;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="example">
+      <main>
+        <ol>
+          <li>
+            <span class="icon-bitmap"></span> Bitmap
+          </li>
+          <li>
+            <span class="icon-svg"></span> SVG
+          </li>
+          <li>
+            <span class="icon-inline-svg">
+              <svg width="50px" height="30px" viewBox="0 0 50 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path class="triangle" d="M19,8 L48,8 L33.5,28 L19,8 Z" fill="#B8E986"></path>
+                    <rect class="square" fill="#4990E2" x="15" y="2" width="19" height="19"></rect>
+                    <circle class="circle" fill="#BE21DE" cx="13.5" cy="17.5" r="10.5"></circle>
+                  </g>
+              </svg>
+            </span>
+            Inline SVG
+          </li>
+          <li>
+            <span class="icon-font"></span>
+            Icon Font
+          </li>
+          <li>
+            <span class="icon-html-entity">&times;</span> Inline HTML Entity
+          </li>
+          <li>
+            <span class="icon-pseudo-content"></span> ISO Character
+          </li>
+          <li>
+            <span class="icon-pure-css"></span> Pure CSS
+          </li>
+        </ol>
+      </main>
+    </div>
+  </body>
+</html>
