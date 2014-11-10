@@ -6,15 +6,23 @@
     <title></title>
     <link rel="stylesheet" href="../base.css">
     <style>
-      main, aside {
-        float: left;
-      }
+      /* Default styles are applied to mobile! Look how simple the mobile styling is! */
       main {
-        width: 68%;
-        margin-right: 2%;
+        margin-bottom: 2%;
       }
-      aside {
-        width: 30%;
+
+      /* Any screen bigger than 500px is broken into columns */
+      @media screen and (min-width: 500px){
+        main, aside {
+          float: left;
+        }
+        main {
+          width: 68%;
+          margin-right: 2%;
+        }
+        aside {
+          width: 30%;
+        }
       }
     </style>
   </head>

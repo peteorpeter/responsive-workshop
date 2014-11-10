@@ -48,7 +48,7 @@
       HTML / CSS / JS Editor
     </li>
     <li>
-      Node.js
+      <strike>Node.js</strike>
     </li>
   </ol>
 </section>
@@ -56,11 +56,16 @@
   <h2>Workshop Format</h2>
   <ol>
     <li class="fragment">Blithering and Calisthenics</li>
-    <li class="fragment">HTML/CSS Skill level: Beginner +</li>
+    <li class="fragment">Interrupt</li>
     <li class="fragment">V1.0</li>
     <li class="fragment">Nahiyan is Da Man</li>
     <li class="fragment">Breaks On The Hour</li>
   </ol>
+</section>
+<section>
+  <h2>github.com/peteorpeter/responsive-workshop/</h2>
+  <p>Download the .ZIP!</p>
+  <p>Or ask Pete for the USB stick...</p>
 </section>
 <section data-background="img/allsopp.png">
   <h2>#TBT 2000:</h2>
@@ -88,117 +93,101 @@
   <section data-background="img/device-chart-imac-retina-with-crt.jpg" data-background-color="white" data-background-size="70%"></section>
 </section>
 <section>
-  <h2><strike>Problem</strike> Opportunity 1b</h2>
-  <h3>Pixel Ratio</h3>
-  <div class="fragment">
-    <blink>DON'T READ THIS:</blink>
-    <blockquote cite="http://www.w3.org/TR/CSS2/syndata.html#length-units ">&ldquo;The reference pixel is the visual angle of one pixel on a device with a pixel density of 96dpi and a distance from the reader of an arm's length. For a nominal arm's length of 28 inches, the visual angle is therefore about 0.0213 degrees. For reading at arm's length, 1px thus corresponds to about 0.26 mm (1/96 inch).&rdquo;</blockquote>
-    <caption>- CSS 2.1 Spec</caption>
-  </div>
-  <aside class="notes">
-    Basically, they are trying to make a CSS pixel constant in the physical space, at 96DPI in "normal" circumstances.
-  </aside>
-</section>
-<section>
-  <table class="pixel-ratio-table">
-    <tbody>
-      <tr>
-        <th title="Sort by Device"></th>
-        <th title="Sort by Pixel Width">Physical Width</th>
-        <th title="Sort by Pixel Height">Physical Height</th>
-        <th title="Sort by CSS Pixel Ratio">Pixel Ratio</th>
-        <th title="Sort by Device-Width">CSS Width</th>
-        <th title="Sort by Device-Height">CSS Height</th>
-      </tr>
-      <tr>
-        <td>iPhone 3GS</td>
-        <td>480</td>
-        <td>320</td>
-        <td>1</td>
-        <td>480</td>
-        <td>320</td>
-      </tr>
-      <tr>
-        <td>iPhone 4S</td>
-        <td>960</td>
-        <td>640</td>
-        <td>2</td>
-        <td>480</td>
-        <td>320</td>
-      </tr>
-      <tr>
-        <td>iPhone 5S</td>
-        <td>1136</td>
-        <td>640</td>
-        <td>2</td>
-        <td>568</td>
-        <td>320</td>
-      </tr>
-      <tr>
-        <td>iPhone 6</td>
-        <td>1334</td>
-        <td>750</td>
-        <td>2</td>
-        <td>667</td>
-        <td>375</td>
-      </tr>
-      <tr>
-        <td>iPhone 6 Plus</td>
-        <td>2208</td>
-        <td>1242</td>
-        <td>3</td>
-        <td>736</td>
-        <td>414</td>
-      </tr>
-      <tr>
-        <td>iPad 1</td>
-        <td>1024</td>
-        <td>768</td>
-        <td>1</td>
-        <td>1024</td>
-        <td>768</td>
-      </tr>
-      <tr>
-        <td>iPad Air</td>
-        <td>2048</td>
-        <td>1536</td>
-        <td>2</td>
-        <td>1024</td>
-        <td>768</td>
-      </tr>
-      <tr>
-        <td>iPad 4</td>
-        <td>2048</td>
-        <td>1536</td>
-        <td>2</td>
-        <td>1024</td>
-        <td>768</td>
-      </tr>
-      <!--<tr>-->
-        <!--<td>MacBook Pro 15-inch Retina display</td>-->
-        <!--<td>2880</td>-->
-        <!--<td>1800</td>-->
-        <!--<td>2</td>-->
-        <!--<td>1440</td>-->
-        <!--<td>900</td>-->
-      <!--</tr>-->
-    </tbody>
-  </table>
-  <cite>Source: <a href="http://www.canbike.org/CSSpixels/">http://www.canbike.org/CSSpixels/</a></cite>
-</section>
-<section>
-  <h2>Therefore: Bitmaps suck!</h2>
-  <ul>
-    <li><code>/img/</code></li>
-    <li>Separate files mean separate network requests</li>
-    <li class="fragment">Immunize yourself from pixel-ratio
-      <ul>
-        <li>Power to the CSS</li>
-        <li>SVG</li>
-        <li>Icon fonts</li>
-      </ul>
-    </li>
-  </ul>
+  <section>
+    <h2><strike>Problem</strike> Opportunity 1b</h2>
+    <h3>Pixel Ratio</h3>
+    <div class="fragment">
+      <blockquote cite="http://www.w3.org/TR/CSS2/syndata.html#length-units ">&ldquo;The reference pixel is the visual angle of one pixel on a device with a pixel density of 96dpi and a distance from the reader of an arm's length. For a nominal arm's length of 28 inches, the visual angle is therefore about 0.0213 degrees. For reading at arm's length, 1px thus corresponds to about 0.26 mm (1/96 inch).&rdquo;</blockquote>
+      <h1 class="fragment">?!?</h1>
+    </div>
+  </section>
+  <section>
+    <table class="pixel-ratio-table">
+      <tbody>
+        <tr>
+          <th title="Sort by Device"></th>
+          <th title="Sort by Pixel Width">Physical Width</th>
+          <th title="Sort by Pixel Height">Physical Height</th>
+          <th title="Sort by CSS Pixel Ratio">Pixel Ratio</th>
+          <th title="Sort by Device-Width">CSS Width</th>
+          <th title="Sort by Device-Height">CSS Height</th>
+        </tr>
+        <tr>
+          <td>iPhone 3GS</td>
+          <td>480</td>
+          <td>320</td>
+          <td>1</td>
+          <td>480</td>
+          <td>320</td>
+        </tr>
+        <tr>
+          <td>iPhone 4S</td>
+          <td>960</td>
+          <td>640</td>
+          <td>2</td>
+          <td>480</td>
+          <td>320</td>
+        </tr>
+        <tr>
+          <td>iPhone 5S</td>
+          <td>1136</td>
+          <td>640</td>
+          <td>2</td>
+          <td>568</td>
+          <td>320</td>
+        </tr>
+        <tr>
+          <td>iPhone 6</td>
+          <td>1334</td>
+          <td>750</td>
+          <td>2</td>
+          <td>667</td>
+          <td>375</td>
+        </tr>
+        <tr>
+          <td>iPhone 6 Plus</td>
+          <td>2208</td>
+          <td>1242</td>
+          <td>3</td>
+          <td>736</td>
+          <td>414</td>
+        </tr>
+        <tr>
+          <td>iPad 1</td>
+          <td>1024</td>
+          <td>768</td>
+          <td>1</td>
+          <td>1024</td>
+          <td>768</td>
+        </tr>
+        <tr>
+          <td>iPad Air</td>
+          <td>2048</td>
+          <td>1536</td>
+          <td>2</td>
+          <td>1024</td>
+          <td>768</td>
+        </tr>
+        <tr>
+          <td>iPad 4</td>
+          <td>2048</td>
+          <td>1536</td>
+          <td>2</td>
+          <td>1024</td>
+          <td>768</td>
+        </tr>
+        <!--<tr>-->
+          <!--<td>MacBook Pro 15-inch Retina display</td>-->
+          <!--<td>2880</td>-->
+          <!--<td>1800</td>-->
+          <!--<td>2</td>-->
+          <!--<td>1440</td>-->
+          <!--<td>900</td>-->
+        <!--</tr>-->
+      </tbody>
+    </table>
+    <cite>Source: <a href="http://www.canbike.org/CSSpixels/">http://www.canbike.org/CSSpixels/</a></cite>
+  </section>
 </section>
 <section>
   <section>
@@ -221,16 +210,42 @@
   </section>
 </section>
 <section>
-  <h2><strike>Problem</strike> Opportunity 3</h2>
-  <h3>User Input</h3>
-  <ul>
-    <li class="fragment">Fingers are fat!</li>
-    <li class="fragment">On-screen keyboards suck</li>
-    <li class="fragment">Gestures are a thing</li>
-  </ul>
+  <section>
+    <h2><strike>Problem</strike> Opportunity 3</h2>
+    <h3>User Input</h3>
+  </section>
+  <section>
+    <h2>Fingers are fat!</h2>
+    <div style="height: 50px; width: 50px; border-radius:100%; background: indianred; margin:0 auto;"></div>
+  </section>
+  <section>
+    <h2>On-screen keyboards are fat!</h2>
+    <img src="img/keyboard.png"/>
+    <p>And slow...</p>
+  </section>
 </section>
 <section>
-  <h2>Enough!</h2>
+  <section>
+    <h2>General Mobile Design Philosophy</h2>
+  </section>
+  <section>
+    <h2>Prioritize, prioritize, prioritize!</h2>
+  </section>
+  <section>
+    <h2>Bigger tap targets</h2>
+  </section>
+  <section>
+    <h2>Embrace New Conventions</h2>
+  </section>
+  <section>
+    <h2>Don't fear scroll</h2>
+  </section>
+  <section>
+    <h2>Light and fast</h2>
+  </section>
+</section>
+<section data-background="img/mrt.png">
+  <h1>Enough Talkin!</h1>
 </section>
 <section>
   <h2>HTML/CSS Warm Up</h2>
@@ -260,6 +275,7 @@
 </section>
 <section>
   <h2>Exercise 1</h2>
+  <p>(If you haven't already, open up /exercises/index.html)</p>
 </section>
 <section>
   <h2>Pete, demo the top secret tool <small>that most people hopefully already know about</small></h2>
@@ -303,6 +319,10 @@
   <h2>Exercise 3</h2>
 </section>
 <section>
+  <p>Wait, we aren't done!</p>
+  <h2>Mobile First Development!</h2>
+</section>
+<section>
   <h2>Exercise 4</h2>
   <p>(Mobile-first <a href="../exercises/exercises/4.html">codealong</a>!)</p>
 </section>
@@ -317,15 +337,80 @@
   <p>You just made this!  Sweet!</p>
 </section>
 <section>
-  <p>Or did you?!?!</p>
-  <h2>Exercise 5(?)</h2>
+  <p>Well, almost...</p>
+  <h2>Exercise 5</h2>
 </section>
 <section>
-  <screenulator class="shifter"></screenulator>
-  <h3>Responsive Pattern 2:</h3>
-  <h2>Shifter</h2>
+  <screenulator class="column-plus-plus"></screenulator>
+  <p>Hey Pete, why don't you use this thingy here to demo <code>flex-box</code>?</p>
 </section>
-
+<section>
+  <img src="img/caniuse-flexbox.png">
+</section>
+<!--<section>-->
+  <!--<screenulator class="shifter"></screenulator>-->
+  <!--<h3>Responsive Pattern 2:</h3>-->
+  <!--<h2>Shifter</h2>-->
+<!--</section>-->
+<section>
+  <h2>Help!</h2>
+  <p>CSS pre-compilers to the rescue!</p>
+</section>
+<section>
+  <section>
+    <h2>More Help!</h2>
+    <p>Frameworks to the rescue!</p>
+    <img src="img/framework-overview.png">
+  </section>
+  <section>
+    <img src="img/framework-bootstrap.png">
+  </section>
+  <section>
+    <img src="img/framework-bootstrap-grid.png">
+  </section>
+  <section>
+    <img src="img/framework-bootstrap-classes.png">
+  </section>
+  <section>
+    <img src="img/framework-bootstrap-mixins.png">
+  </section>
+</section>
+<section>
+  <h2>Enough Layout!</h2>
+  <p>Remember "pixel ratio"?</p>
+</section>
+<section>
+  <section>
+    <h2>Bitmaps suck!</h2>
+    <p>I mean, high-res stuff looks awesome on a retina screen... but</p>
+  </section>
+  <section>
+    <img src="img/image-2x.png">
+  </section>
+  <section>
+    <ol>
+      <li>Bandwidth Hog</li>
+      <li>Lack of CSS Control</li>
+      <li>States</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Hail the Vector!</h2>
+    <p>See the pun?  That was a pun.  Never mind.</p>
+  </section>
+  <section>
+    <h2>Exercise 7</h2>
+  </section>
+</section>
+<section>
+  <img src="img/caniuse-picture.png">
+</section>
+<section>
+  <h2>Follow-up (if time)</h2>
+</section>
+<section>
+  <h2>Feedback!</h2>
+</section>
 </div>
 </div>
 <script src="lib/js/head.min.js"></script>
