@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=true" name="viewport">
+    <title></title>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../chosen/chosen.min.css">
+    <style>
+      select, input {
+         min-width: 150px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    </style>
+    <script src="../chosen/jquery-1.11.1.min.js"></script>
+    <script src="../chosen/chosen.jquery.min.js"></script>
+    <script>
+      $(function(){
+        $('select').chosen();
+      })
+    </script>
+  </head>
+  <body>
+    <div class="example">
+      <main>
+        <form>
+          <fieldset>
+            <ul>
+              <li>
+                <label for="text">Text</label>
+                <input id="text" type="text"/>
+              </li>
+              <li>
+                <label for="checkbox">Checkbox</label>
+                <input id="checkbox" type="checkbox"/>
+              </li>
+              <li>
+                 <label for="radio">Radio</label>
+                 <input id="radio" type="radio"/>
+               </li>
+              <li>
+                <label for="date">Date</label>
+                <input id="date"type="date"/>
+              </li>
+              <li>
+                <label for="email">Email</label>
+                <input id="email" type="email"/>
+              </li>
+              <li>
+                <label for="number">Number</label>
+                <input id="number" type="number"/>
+              </li>
+              <li>
+                <label for="search">Search</label>
+                <input id="search" type="search"/>
+              </li>
+              <li>
+                <label for="tel">Tel</label>
+                <input id="tel" type="tel"/>
+              </li>
+              <li>
+                <label for="select">Select</label>
+                <select id="select">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                  <option>Option 4</option>
+                </select>
+              </li>
+              <li>
+                <label for="selectmulti">Select Multi</label>
+                <select multiple id="selectmulti">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                  <option>Option 4</option>
+                </select>
+              </li>
+              <li>
+                <button type="submit">Submit</button>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

@@ -31,3 +31,7 @@ a {
 .example {
   position: relative;
 }
+fieldset {
+  border: none;
+  padding: 0;
+}
